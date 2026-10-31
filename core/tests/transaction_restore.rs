@@ -58,7 +58,7 @@ fn planner_requires_backup_and_exposes_rollback() {
     assert!(matches!(
         Planner::plan(
             Operation::Install,
-            &[mutation.clone()],
+            std::slice::from_ref(&mutation),
             &facts(),
             &selection,
             None

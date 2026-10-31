@@ -1,0 +1,30 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #ecebe7; background: #111315; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at 80% 0, #263a35 0, #111315 36rem); }
+main { width: min(980px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 72px; }
+header { max-width: 720px; }
+h1 { font-size: clamp(2.4rem, 6vw, 5.2rem); line-height: .96; letter-spacing: -.055em; margin: 10px 0 20px; }
+h2 { font-size: 1.7rem; margin-top: 0; }
+p, li { color: #b9c0bd; line-height: 1.6; }
+.eyebrow { color: #7ce3b4; text-transform: uppercase; letter-spacing: .16em; font-weight: 750; font-size: .76rem; }
+nav { display: flex; gap: 8px; overflow-x: auto; margin: 40px 0 18px; }
+nav span { white-space: nowrap; color: #68716e; font-size: .8rem; border-bottom: 2px solid #29302e; padding: 10px 14px; }
+nav .active { color: #fff; border-color: #7ce3b4; }
+nav .done { color: #8caaa0; }
+.panel { background: rgba(29, 33, 34, .94); border: 1px solid #343b39; border-radius: 22px; padding: clamp(24px, 5vw, 48px); box-shadow: 0 24px 80px #0008; }
+label { display: grid; gap: 8px; color: #e7e9e8; }
+input[type="text"], input:not([type]) { background: #111514; border: 1px solid #4a5551; border-radius: 10px; color: white; font-size: 1.1rem; padding: 14px; }
+[role="alert"] { color: #ffaaa0; }
+.notice, .result { border-left: 3px solid #7ce3b4; background: #16231f; padding: 16px 18px; border-radius: 0 10px 10px 0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.card { display: flex; grid-template-columns: 22px 1fr; align-items: start; background: #161a1b; border: 1px solid #333a39; border-radius: 14px; padding: 16px; cursor: pointer; }
+.card.selected { border-color: #7ce3b4; background: #17231f; }
+.card span { display: grid; gap: 8px; }
+.card small, .card em { color: #9ca6a2; line-height: 1.35; }
+.card a { color: #7ce3b4; }
+button { border: 0; border-radius: 999px; background: #7ce3b4; color: #102019; font-weight: 750; padding: 12px 20px; cursor: pointer; }
+button.secondary { background: #303735; color: #e8eeeb; }
+button:disabled { opacity: .35; cursor: not-allowed; }
+footer, .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+footer { justify-content: space-between; border-top: 1px solid #343b39; margin-top: 36px; padding-top: 22px; }
+pre { white-space: pre-wrap; color: #cbd2cf; }
