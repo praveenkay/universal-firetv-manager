@@ -1,0 +1,21 @@
+{
+  "state": "connected",
+  "shell": {
+    "getprop ro.serialno": { "stdout": "REDACTED-SERIAL\n", "stderr": "", "exit_code": 0 },
+    "getprop ro.product.model": { "stdout": "Fire TV Cube Fixture\n", "stderr": "", "exit_code": 0 },
+    "getprop ro.product.device": { "stdout": "raven-fixture\n", "stderr": "", "exit_code": 0 },
+    "getprop ro.build.fingerprint": { "stdout": "amazon/raven-fixture/raven-fixture:9/TEST/fixture:user/release-keys\n", "stderr": "", "exit_code": 0 },
+    "getprop ro.build.version.fireos": { "stdout": "7.0.0.0\n", "stderr": "", "exit_code": 0 },
+    "getprop ro.build.version.sdk": { "stdout": "28\n", "stderr": "", "exit_code": 0 },
+    "getprop ro.product.cpu.abilist": { "stdout": "arm64-v8a,armeabi-v7a\n", "stderr": "", "exit_code": 0 },
+    "pm list packages --user 0": { "stdout": "package:com.amazon.tv.launcher\npackage:com.amazon.tv.settings.v2\npackage:com.amazon.tv.ime\npackage:com.android.bluetooth\npackage:com.amazon.franktvinput\n", "stderr": "", "exit_code": 0 },
+    "pm list packages -d --user 0": { "stdout": "package:com.example.disabled\n", "stderr": "", "exit_code": 0 },
+    "cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.HOME": { "stdout": "com.amazon.tv.launcher/.ui.HomeActivity_vNext\n", "stderr": "", "exit_code": 0 },
+    "cmd package query-activities --brief -a android.settings.SETTINGS": { "stdout": "com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity\n", "stderr": "", "exit_code": 0 },
+    "cmd package query-services --components -a android.media.tv.TvInputService": { "stdout": "com.amazon.franktvinput/.FrankTvInputService\n", "stderr": "", "exit_code": 0 },
+    "settings get secure default_input_method": { "stdout": "com.amazon.tv.ime/.FireTVIME\n", "stderr": "", "exit_code": 0 },
+    "settings get secure enabled_accessibility_services": { "stdout": "null\n", "stderr": "", "exit_code": 0 },
+    "pm list features": { "stdout": "feature:android.hardware.bluetooth\nfeature:android.software.leanback\n", "stderr": "", "exit_code": 0 },
+    "df -k /data": { "stdout": "Filesystem 1K-blocks Used Available Use% Mounted on\n/dev/block/data 12582912 5412864 7168000 43% /data\n", "stderr": "", "exit_code": 0 }
+  }
+}

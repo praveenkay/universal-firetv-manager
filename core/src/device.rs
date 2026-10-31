@@ -53,5 +53,6 @@ pub struct DeviceFacts {
     pub input_method_package: Option<String>,
     pub accessibility_services: BTreeSet<String>,
     pub capabilities: BTreeSet<String>,
+    pub diagnostics: BTreeMap<String, String>,
     pub storage_available_bytes: Option<u64>,
 }
