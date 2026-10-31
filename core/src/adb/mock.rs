@@ -56,6 +56,14 @@ impl MockAdbTransport {
             .len()
     }
 
+    #[must_use]
+    pub fn shell_calls(&self) -> Vec<String> {
+        self.shell_calls
+            .lock()
+            .unwrap_or_else(std::sync::PoisonError::into_inner)
+            .clone()
+    }
+
     pub fn set_shell_response(&self, command: &str, stdout: &str, stderr: &str, exit_code: i32) {
         self.shell
             .lock()
