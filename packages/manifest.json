@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "policy": "No APK is trusted until its package, signer, SDK, ABI and optional SHA-256 are verified locally.",
+  "catalog": "catalog/launchers.json"
+}

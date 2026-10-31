@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "launchers": [
+    {
+      "id": "projectivy",
+      "name": "Projectivy Launcher",
+      "source_url": "https://github.com/spocky/miproja1/releases",
+      "license": "Proprietary; supplied by the user",
+      "open_source": false,
+      "user_supplied": true,
+      "status": "supported",
+      "min_sdk": 25,
+      "max_sdk": null,
+      "abis": [],
+      "requires_validated_profile": false,
+      "warning": "The manager does not redistribute Projectivy. Premium features require the user's own license."
+    },
+    {
+      "id": "dumbtv-home",
+      "name": "dumbtv Home",
+      "source_url": "https://github.com/humblemuzzu/dumbtv",
+      "license": "GPL-3.0",
+      "open_source": true,
+      "user_supplied": false,
+      "status": "recommended",
+      "min_sdk": 25,
+      "max_sdk": null,
+      "abis": [],
+      "requires_validated_profile": false,
+      "warning": null
+    },
+    {
+      "id": "ltv-launcher",
+      "name": "LTvLauncher",
+      "source_url": "https://github.com/leanbitlab-org/LtvLauncher",
+      "license": "See upstream repository",
+      "open_source": true,
+      "user_supplied": false,
+      "status": "experimental",
+      "min_sdk": 25,
+      "max_sdk": null,
+      "abis": [],
+      "requires_validated_profile": false,
+      "warning": "Experimental on Fire OS; test Home and settings access before keeping changes."
+    },
+    {
+      "id": "firetv-web-launcher",
+      "name": "Fire TV Web Launcher",
+      "source_url": "https://github.com/pickdani/fire-tv-web-launcher",
+      "license": "See upstream repository",
+      "open_source": true,
+      "user_supplied": false,
+      "status": "experimental",
+      "min_sdk": 30,
+      "max_sdk": 30,
+      "abis": [],
+      "requires_validated_profile": true,
+      "warning": "Only offered for a validated Fire OS 8 profile."
+    }
+  ]
+}

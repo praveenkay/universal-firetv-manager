@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Universal Fire TV Manager launcher catalog",
+  "type": "object",
+  "required": ["schema_version", "launchers"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "launchers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "source_url", "license", "open_source", "user_supplied", "status", "min_sdk", "abis", "requires_validated_profile"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "source_url": { "type": "string", "format": "uri" },
+          "license": { "type": "string" },
+          "open_source": { "type": "boolean" },
+          "user_supplied": { "type": "boolean" },
+          "status": { "enum": ["recommended", "supported", "experimental"] },
+          "min_sdk": { "type": "integer", "minimum": 1 },
+          "max_sdk": { "type": ["integer", "null"] },
+          "abis": { "type": "array", "items": { "type": "string" } },
+          "requires_validated_profile": { "type": "boolean" },
+          "warning": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
