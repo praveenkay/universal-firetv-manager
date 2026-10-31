@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Universal Fire TV Manager compatibility profile",
+  "type": "object",
+  "required": ["schema_version", "id", "status", "min_sdk", "max_sdk", "abis", "protected_packages", "optional_disable_packages", "launcher_ids"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["built-in", "experimental", "candidate", "validated"] },
+    "fingerprints": { "type": "array", "items": { "type": "string" } },
+    "min_sdk": { "type": "integer", "minimum": 1 },
+    "max_sdk": { "type": "integer", "minimum": 1 },
+    "abis": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "protected_packages": { "type": "array", "items": { "type": "string" } },
+    "optional_disable_packages": { "type": "array", "items": { "type": "string" } },
+    "launcher_ids": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

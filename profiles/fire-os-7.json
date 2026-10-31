@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "fire-os-7",
+  "status": "built-in",
+  "fingerprints": [],
+  "min_sdk": 28,
+  "max_sdk": 28,
+  "abis": ["armeabi-v7a", "arm64-v8a"],
+  "protected_packages": ["com.amazon.firehomestarter", "com.amazon.fireinputdevices", "com.amazon.tv.devicecontrol"],
+  "optional_disable_packages": [],
+  "launcher_ids": ["projectivy", "dumbtv-home", "ltv-launcher", "user-supplied"]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "raven-experimental",
+  "status": "experimental",
+  "fingerprints": ["amazon/raven-fixture/raven-fixture:9/TEST/fixture:user/release-keys"],
+  "min_sdk": 28,
+  "max_sdk": 28,
+  "abis": ["arm64-v8a", "armeabi-v7a"],
+  "protected_packages": ["com.amazon.franktvinput"],
+  "optional_disable_packages": [],
+  "launcher_ids": ["projectivy", "dumbtv-home", "ltv-launcher", "user-supplied"]
+}

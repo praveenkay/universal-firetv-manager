@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "base-safe",
+  "status": "built-in",
+  "fingerprints": [],
+  "min_sdk": 25,
+  "max_sdk": 40,
+  "abis": ["armeabi-v7a", "arm64-v8a"],
+  "protected_packages": ["com.amazon.tv.launcher", "com.amazon.tv.settings.v2", "com.android.bluetooth", "com.amazon.tv.ime", "com.amazon.venezia"],
+  "optional_disable_packages": [],
+  "launcher_ids": ["projectivy", "dumbtv-home", "ltv-launcher", "user-supplied"]
+}
