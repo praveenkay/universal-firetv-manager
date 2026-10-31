@@ -1,2 +1,16 @@
 .worktrees/
 .superpowers/
+target/
+node_modules/
+dist/
+*.apk
+*.aab
+*.ipa
+*.xcarchive/
+adbkey
+adbkey.pub
+backups/
+artifacts/
+installers/
+*.log
+.DS_Store
