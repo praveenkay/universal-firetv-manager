@@ -20,6 +20,10 @@ Allow unknown-source installation for the app opening the APK. Use the `arm64` A
 
 Run `cargo build --release -p firetvctl`; the binary is `target/release/firetvctl` (`.exe` on Windows).
 
+## iPhone and iPad
+
+The iOS package is intentionally last and is not included in `v0.1.0-test.1`. Building it requires full Xcode, Apple code signing, and a developer-selected team. After installing Xcode, run `bash scripts/package-ios.sh`; inspect the generated entitlements and Local Network prompt before signing or distributing the app.
+
 ## First connection
 
 Enable ADB debugging, find the numeric IP under **Settings → My Fire TV → About → Network**, enter it manually, and approve the RSA prompt on the television.

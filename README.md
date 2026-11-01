@@ -83,6 +83,7 @@ Profiles declare supported SDK/ABI ranges, exact fingerprints, protected package
 - Amazon can change launcher behavior and protected services in an update.
 - Home interception, Cube speaker routing, HDMI-CEC, and volume behavior vary by model/build and require real-device validation.
 - The current test package connects and inspects; unknown builds remain conservative.
+- The first prerelease does not include iOS; full Xcode and Apple signing are required and `scripts/package-ios.sh` is provided for that final package.
 
 ## Security
 
