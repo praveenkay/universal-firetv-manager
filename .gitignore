@@ -12,5 +12,6 @@ adbkey.pub
 backups/
 artifacts/
 installers/
+release/
 *.log
 .DS_Store
