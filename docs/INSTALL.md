@@ -14,7 +14,7 @@ Install Rust 1.90+, Node 22+, WebKitGTK, and Tauri system dependencies. Run `bas
 
 ## Android
 
-Allow unknown-source installation for the app opening the APK. Use `app-arm64-debug.apk` on modern devices and `app-arm-debug.apk` on older 32-bit ARM devices. This companion controls another Fire TV over the LAN; it is not a launcher.
+Allow unknown-source installation for the app opening the APK. Use the `arm64` APK on modern devices and `armv7` on older 32-bit ARM devices. Test APKs are release-optimized but signed with a disclosed test key, not a store identity. This companion controls another Fire TV over the LAN; it is not a launcher.
 
 ## CLI
 
