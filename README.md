@@ -2,6 +2,15 @@
 
 Backup-first launcher setup, conservative debloat, health checks, uninstall, and restore for Amazon Fire TV Sticks and Cubes.
 
+[![Latest release](https://img.shields.io/github/v/release/praveenkay/universal-firetv-manager?style=flat-square)](https://github.com/praveenkay/universal-firetv-manager/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/praveenkay/universal-firetv-manager/total?style=flat-square)](https://github.com/praveenkay/universal-firetv-manager/releases)
+[![License: MIT OR Apache-2.0](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue?style=flat-square)](LICENSE)
+[![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux%20%7C%20Android-orange?style=flat-square)](docs/platform/)
+
+[![Universal Fire TV Manager: Backup, Debloat, Restore](docs/assets/universal-firetv-manager-social-card.png)](https://github.com/praveenkay/universal-firetv-manager/releases/latest)
+
+**[Download the latest release](https://github.com/praveenkay/universal-firetv-manager/releases/latest)** · [Install guide](docs/INSTALL.md) · [Demo](docs/DEMO.md) · [Ask a question](https://github.com/praveenkay/universal-firetv-manager/discussions)
+
 > **Safety rule:** use `base-safe` on unknown devices. The project does not flash a replacement operating system and cannot back up private app logins on retail, non-root Fire OS.
 
 ## Quick Start
@@ -107,3 +116,7 @@ bash scripts/check-docs.sh
 ```
 
 Original code is dual-licensed under MIT or Apache-2.0. Third-party launchers retain their upstream licenses.
+
+## Community
+
+Device reports are especially useful because Fire OS behavior varies by model and build. Before sharing an inspection report, follow the redaction steps in [profile validation](docs/PROFILE-VALIDATION.md). Use [Discussions](https://github.com/praveenkay/universal-firetv-manager/discussions) for questions and test reports, and [Issues](https://github.com/praveenkay/universal-firetv-manager/issues) for reproducible bugs.
