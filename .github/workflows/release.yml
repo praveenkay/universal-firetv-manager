@@ -1,9 +1,9 @@
-name: Test Release
+name: Release
 
 on:
   workflow_dispatch:
   push:
-    tags: ["v*-test.*"]
+    tags: ["v*"]
 
 permissions:
   contents: write
@@ -36,9 +36,63 @@ jobs:
           name: firetvctl-${{ matrix.name }}
           path: release/*
 
+  guides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/package-guides.sh release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guides
+          path: release/Universal-Fire-TV-Manager-Guides.zip
+
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            name: linux-x86_64
+            bundles: appimage,deb
+          - os: windows-latest
+            name: windows-x86_64
+            bundles: msi,nsis
+          - os: macos-latest
+            name: macos-arm64
+            bundles: dmg
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.90.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/desktop/package-lock.json
+      - name: Install Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+      - run: npm --prefix apps/desktop ci
+      - run: npm --prefix apps/desktop test
+      - run: npm --prefix apps/desktop run tauri build -- --bundles ${{ matrix.bundles }}
+      - name: Collect bundles
+        shell: bash
+        run: |
+          mkdir -p release
+          find target/release/bundle -maxdepth 5 -type f \
+            \( -name '*.dmg' -o -name '*.AppImage' -o -name '*.deb' -o -name '*.msi' -o -name '*-setup.exe' \) \
+            -exec cp {} release/ \;
+          test -n "$(find release -type f -maxdepth 1 -print -quit)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-${{ matrix.name }}
+          path: release/*
+
   publish:
     if: startsWith(github.ref, 'refs/tags/')
-    needs: cli
+    needs: [cli, guides, desktop]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
@@ -48,6 +102,6 @@ jobs:
       - run: sha256sum release/* > release/SHA256SUMS
       - uses: softprops/action-gh-release@v2
         with:
-          prerelease: true
+          prerelease: ${{ contains(github.ref_name, '-test.') || contains(github.ref_name, '-rc') }}
           generate_release_notes: true
           files: release/*

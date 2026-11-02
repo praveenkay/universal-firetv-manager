@@ -2,7 +2,7 @@
 
 Backup-first launcher setup, conservative debloat, health checks, uninstall, and restore for Amazon Fire TV Sticks and Cubes.
 
-> **Test release:** use `base-safe` on unknown devices. The project does not flash a replacement operating system and cannot back up private app logins on retail, non-root Fire OS.
+> **Safety rule:** use `base-safe` on unknown devices. The project does not flash a replacement operating system and cannot back up private app logins on retail, non-root Fire OS.
 
 ## Quick Start
 
@@ -12,7 +12,7 @@ Backup-first launcher setup, conservative debloat, health checks, uninstall, and
 4. Inspect compatibility, select a launcher, and create the mandatory baseline backup.
 5. Review the plan, install, then run health checks.
 
-See [installation instructions](docs/INSTALL.md) for macOS, Windows, Linux, and Android.
+See [installation instructions](docs/INSTALL.md) and the individual [platform guides](docs/platform/) for macOS, Windows, Linux, Android, and the CLI. The same guides are included inside each release download bundle.
 
 ## Enable ADB
 
@@ -82,8 +82,8 @@ Profiles declare supported SDK/ABI ranges, exact fingerprints, protected package
 - Retail ADB cannot preserve or restore third-party app private data or logins.
 - Amazon can change launcher behavior and protected services in an update.
 - Home interception, Cube speaker routing, HDMI-CEC, and volume behavior vary by model/build and require real-device validation.
-- The current test package connects and inspects; unknown builds remain conservative.
-- The first prerelease does not include iOS; full Xcode and Apple signing are required and `scripts/package-ios.sh` is provided for that final package.
+- Unknown builds remain conservative and package-specific repair/uninstall stays blocked until a profile is validated.
+- iOS is not included in the desktop/Android release; full Xcode, an Apple developer-selected team, and signing are required. `scripts/package-ios.sh` is provided for that final package.
 
 ## Security
 

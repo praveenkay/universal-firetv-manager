@@ -16,6 +16,8 @@ armv7="$root/artifacts/android/Universal-Fire-TV-Manager-Android-armv7.apk"
 [[ -f "$arm64" ]] && cp "$arm64" "$stage/Universal-Fire-TV-Manager-Android-arm64.apk"
 [[ -f "$armv7" ]] && cp "$armv7" "$stage/Universal-Fire-TV-Manager-Android-armv7.apk"
 
+bash "$root/scripts/package-guides.sh" "$stage"
+
 bash "$root/scripts/check-repository.sh" "$stage"
 bash "$root/scripts/checksums.sh" "$stage"
 echo "release staged at $stage"

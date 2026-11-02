@@ -1,5 +1,7 @@
 # Installation
 
+Choose a platform-specific guide: [device setup](platform/DEVICE-SETUP.md), [macOS](platform/MACOS.md), [Windows](platform/WINDOWS.md), [Linux](platform/LINUX.md), [Android](platform/ANDROID.md), or [CLI](platform/CLI.md). The same files are bundled in `Universal-Fire-TV-Manager-Guides.zip` on every release.
+
 ## macOS
 
 Open the test DMG and drag **Universal Fire TV Manager** to Applications. Test builds are not notarized, so Control-click and choose Open the first time. Source build: `bash scripts/package-desktop.sh`.
@@ -14,7 +16,7 @@ Install Rust 1.90+, Node 22+, WebKitGTK, and Tauri system dependencies. Run `bas
 
 ## Android
 
-Allow unknown-source installation for the app opening the APK. Use the `arm64` APK on modern devices and `armv7` on older 32-bit ARM devices. Test APKs are release-optimized but signed with a disclosed test key, not a store identity. This companion controls another Fire TV over the LAN; it is not a launcher.
+Allow unknown-source installation for the app opening the APK. Use the `arm64` APK on modern devices and `armv7` on older 32-bit ARM devices. Release APKs are optimized and signed with the project's community release key, not a store identity. This companion controls another Fire TV over the LAN; it is not a launcher.
 
 ## CLI
 
@@ -22,7 +24,7 @@ Run `cargo build --release -p firetvctl`; the binary is `target/release/firetvct
 
 ## iPhone and iPad
 
-The iOS package is intentionally last and is not included in `v0.1.0-test.1`. Building it requires full Xcode, Apple code signing, and a developer-selected team. After installing Xcode, run `bash scripts/package-ios.sh`; inspect the generated entitlements and Local Network prompt before signing or distributing the app.
+The iOS package is intentionally last and is not included in the unsigned community release. Building it requires full Xcode, Apple code signing, and a developer-selected team. After installing Xcode, run `bash scripts/package-ios.sh`; inspect the generated entitlements and Local Network prompt before signing or distributing the app.
 
 ## First connection
 
