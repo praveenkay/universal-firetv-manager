@@ -4,7 +4,7 @@ Choose a platform-specific guide: [device setup](platform/DEVICE-SETUP.md), [mac
 
 ## macOS
 
-Open the test DMG and drag **Universal Fire TV Manager** to Applications. Test builds are not notarized, so Control-click and choose Open the first time. Source build: `bash scripts/package-desktop.sh`.
+Open the DMG and drag **Universal Fire TV Manager** to Applications. Community builds are not Apple-notarized, so Control-click and choose Open the first time. Source build: `bash scripts/package-desktop.sh`.
 
 ## Windows
 
