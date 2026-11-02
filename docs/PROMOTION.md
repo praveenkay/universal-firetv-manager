@@ -143,7 +143,7 @@ Chapter outline:
 
 | Channel | URL | Date | Notes |
 |---|---|---|---|
-| GitHub |  |  |  |
+| GitHub | https://github.com/praveenkay/universal-firetv-manager/discussions/1 | 2026-11-01 | Launch announcement and tester call |
 | X |  |  |  |
 | Reddit |  |  |  |
 | Hacker News |  |  |  |
